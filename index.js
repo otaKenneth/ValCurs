@@ -7,18 +7,18 @@ const app = new Vue({
     },
     watch: {
         cur1 () {
-            this.exchange = this.cur1.value / this.cur2.value;
+            this.exchange = (this.cur1.value / this.cur2.value).toFixed(3);
             this.money = 1;
         },
         cur2 () {
-            this.exchange = this.cur1.value / this.cur2.value;
+            this.exchange = (this.cur1.value / this.cur2.value).toFixed(3);
             this.money = 1;
         },
         money () {
-            this.exchange = this.money * (this.cur1.value / this.cur2.value);
+            this.exchange = (this.money * (this.cur1.value / this.cur2.value)).toFixed(3);
         },
         exchange () {
-            this.money = this.exchange / (this.cur1.value / this.cur2.value);
+            this.money = (this.exchange / (this.cur1.value / this.cur2.value)).toFixed(3);
         }
     },
     mounted(){

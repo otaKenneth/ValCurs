@@ -127,14 +127,14 @@ require_once('api/index.php'); ?>
                             <option v-for="cur in currencies" :value="cur">{{cur.name}}</option>
                         </select>
 
-                        <input type="number" class="col-5 form-control text-right" v-model="money" id="" aria-describedby="helpId" placeholder="" min="1">
+                        <input type="number" class="col-5 form-control text-right" v-model="money" id="" aria-describedby="helpId" placeholder="" min="1" step="0.001">
                     </div>
                     <div class="form-group row justify-content-around">
                         <select class="col-6 form-control" v-model="cur2" id="cur2">
                             <option v-for="cur in currencies" :value="cur">{{cur.name}}</option>
                         </select>
 
-                        <input type="number" class="col-5 form-control text-right" v-model="exchange" id="" aria-describedby="helpId" placeholder="">
+                        <input type="number" class="col-5 form-control text-right" v-model="exchange" id="" aria-describedby="helpId" placeholder="" step="0.001">
                     </div>
                 </div>
                 <div class="mx-3 my-2 border-solid border-gray-400 border-2" style="height: 65vh; overflow:auto;">
